@@ -1,0 +1,2 @@
+(function(){self.onmessage=async function(e){const{type:s,chunkIndex:c,url:n}=e.data;if("preload"===s)try{const e=await fetch(n),s=await e.blob();self.chunks=self.chunks||new Map,self.chunks.set(c,s),self.postMessage({type:"preloadComplete",chunkIndex:c,success:!0})}catch(t){self.postMessage({type:"preloadComplete",chunkIndex:c,success:!1,error:t.message})}}})();
+//# sourceMappingURL=347.adfa7fa3.js.map
